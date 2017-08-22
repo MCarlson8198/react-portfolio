@@ -36,27 +36,43 @@
 
 /* ---- Nav Bar ---- */
 
+.navbar-toggle {
+  float: none;
+}
 
+.nav-vertical-align {
+  float: none;
+}
+
+.nav-list {
+font-size: 1.1em;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
 
 .nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   background-color: #2f4f4f;
   opacity: .9;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
-  font-size: 1.3em;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
-.nav item {
-  flex-direction: row;
+.nav-link {
+  color: #fff !important;
 }
 
-.active {
-  font-weight: bold;
+.nav-link:hover {
+  color: #939393 !important;
 }
+
+#newItem {
+  color: #d73232;
+}
+
 
 /* ---- Greeting ---- */
 
@@ -107,6 +123,10 @@
   background-image: url('./images/grey90.png');
 }
 
+#invisible{
+  opacity: .0;
+}
+
 /* ---- Youtube Search App ---- */
 
 #ytMain {
@@ -117,6 +137,7 @@
   color: #2f4f4f;
   background-image: url('./images/grey90.png');
   border-radius: 3px;
+  padding-top: 20px;
 }
 
 .search-bar {
@@ -125,9 +146,9 @@
 }
 
 .search-bar input {
-  min-width: 50%;
   height: 35px;
   border-radius: 4px;
+  margin: auto;
 }
 .video-item img {
   max-width: 64px;
@@ -190,6 +211,8 @@ h1 {
 .weather-search {
   height: 38px;
   text-align: center;
+  border-radius: 3px !important;
+  width: 70% !important;
 }
 
 #weatherInput {
@@ -202,14 +225,13 @@ max-width: 800px;
 display: flex;
 margin-left: auto;
 margin-right: auto;
-text-align: left;
+justify-content: center;
 }
 
 .weather-search-container {
 display: block;
 text-align: center;
-padding-right: 50px;
-padding-left: 20px;
+padding-right: 80px;
 padding-bottom: 30px;
 }
 
@@ -282,12 +304,19 @@ li {
 #transform {
   border-radius: 10px;
   border: 1px #ccc solid;
+  justify-content: center !important;
 }
 
 .TranslateForm {
   margin-top: 20px;
-  padding-left: 2%;
-  padding-right: 2%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.translator {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #selectedLanguage {
@@ -319,4 +348,219 @@ li {
   margin-bottom: 400px;
   padding-top: 20px;
   padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*-- Local Weather --*/
+
+
+.weatherLabelLocalWeather {
+  font-size: 2em;
+}
+
+.weatherCityLocalWeather {
+  font-size: 2.5em;
+  padding-bottom: 0px;
+  margin-bottom: -20px;
+}
+
+.weatherDescriptionLocalWeather {
+  padding-top: 0px;
+  margin-top: -10px;
+  font-size: 1.5em;
+  padding-bottom: 20px;
+}
+
+#backgroundImageLocalWeather {
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  border-radius: 7px;
+  margin-top: -20px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+@keyframes zoom {
+0% { transform:scale(1,1); }
+50% { transform:scale(1.03,1.03); }
+100% {
+    transform:scale(1,1);
+  }
+}
+
+.ClearImg {
+  animation: zoom 30s infinite;
+  background-image: url('http://visionsmithstudio.com/wp-content/uploads/2017/08/Clear.png');
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  border-radius: 7px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.RainImg {
+  animation: zoom 30s infinite;
+  background-image: url('http://visionsmithstudio.com/wp-content/uploads/2017/08/rain.jpeg');
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  border-radius: 7px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.DrizzleImg {
+  animation: zoom 30s infinite;
+  background-image: url('http://visionsmithstudio.com/wp-content/uploads/2017/08/drizzle.jpeg');
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  border-radius: 7px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.SnowyImg {
+  animation: zoom 30s infinite;
+  background-image: url('http://visionsmithstudio.com/wp-content/uploads/2017/08/snowy.jpg');
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  border-radius: 7px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.ThunderstormImg {
+  animation: zoom 30s infinite;
+  background-image: url('http://visionsmithstudio.com/wp-content/uploads/2017/08/thunderstorm.jpg');
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  border-radius: 7px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.ApocalypseImg {
+  animation: zoom 30s infinite;
+  background-image: url('http://visionsmithstudio.com/wp-content/uploads/2017/08/apocalypse.jpg');
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  border-radius: 7px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.CloudsImg {
+  animation: zoom 30s infinite;
+  background-image: url('http://visionsmithstudio.com/wp-content/uploads/2017/08/clouds.jpg');
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  border-radius: 7px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.MistImg {
+  animation: zoom 30s infinite;
+  background-image: url('http://visionsmithstudio.com/wp-content/uploads/2017/08/mist.jpg');
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+  border-radius: 7px;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-bottom: 50px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+#plateLocalWeather {
+ background-image: url('http://visionsmithstudio.com/wp-content/uploads/2017/08/transparentwhite60.png');
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  color: #000000;
+}
+
+#weatherIconLocalWeather {
+  margin-top: -90px;
+  margin-bottom: -30px;
+  margin-right: -60px;
+  margin-left: -60px;
+}
+
+#searchBarLocalWeather {
+  padding-bottom: 20px;
+
+}
+
+#cityNameLocalWeather {
+  width: 70%;
+  display: inline;
+  border-radius: 3px;
 }

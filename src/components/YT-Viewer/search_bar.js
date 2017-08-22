@@ -11,7 +11,7 @@ class SearchBar extends Component {
     return (
       <div className="search-bar transparent-background">
         <input
-          className="form-control text-center"
+          className="form-control text-center search-input"
           placeholder="Search for anything on Youtube"
           value={this.state.term}
           onChange={event => this.onInputChange(event.target.value)} />

@@ -6,10 +6,6 @@ import VideoList from './video_list';
 import VideoDetail from './video_detail';
 const API_KEY = 'AIzaSyDKRXFuFyz03sGRna3ur-psLmWVkj1gC2s';
 
-{/*
-import ReactDOM from 'react-dom';
-*/}
-
 class YTViewer extends Component {
     constructor(props){
       super(props);

@@ -26,7 +26,7 @@ formSubmit(e){
       <div id="translateBody">
         <h4>Please enter a word or phrase (in English)</h4>
         <div className="row TranslateForm">
-          <div className="col-md-6 col-md-offset-3 translator">
+          <div className="translator">
             <form className="well form-inline" onSubmit={this.formSubmit} id="transform">
             <input id="inputPhrase" className="form-control" type="text" ref="textToTranslate" placeholder="Enter a word or phrase" />
               <select id="selectedLanguage" className="form-control" ref="language">
